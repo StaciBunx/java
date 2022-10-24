@@ -3,19 +3,19 @@
 import java.util.Scanner;
 
 public class S2_Task03 {
-    public static boolean isPalindrome(String numb) {
-        StringBuilder strBuilder = new StringBuilder(numb);
+    public static boolean isPalindrome(String text) {
+        StringBuilder strBuilder = new StringBuilder(text);
         strBuilder.reverse();
-        String invertNumb = strBuilder.toString();
-        return numb.equalsIgnoreCase(invertNumb);
+        String invertText = strBuilder.toString();
+        return text.equalsIgnoreCase(invertText);
     }
 
     public static void main(String[] args) {
 
         Scanner iScanner = new Scanner(System.in);
-        System.out.printf("Введите число: ");
-        String numb = iScanner.nextLine();
-        System.out.println(isPalindrome(numb));
+        System.out.printf("Введите текст: ");
+        String text = iScanner.nextLine();
+        System.out.println(isPalindrome(text));
         iScanner.close();
     }
 }
