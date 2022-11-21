@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Notebook {
-    // String processor;
     String brand;
     String memory;
     String color;
@@ -12,7 +11,6 @@ public class Notebook {
             String memory,
             String color,
             String os) {
-        // this.processor = processor;
         this.brand = brand;
         this.memory = memory;
         this.color = color;
