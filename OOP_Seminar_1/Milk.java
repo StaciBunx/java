@@ -18,14 +18,8 @@ public class Milk extends Product {
         return this.fatness;
     }
 
-    // @Override
-    // public String toString() {
-    // return String.format("%s %d: %,.1f\n", super.getName(), this.getFatness(),
-    // super.getPrice());
-    // }
-
     @Override
     public String toString() {
-        return String.format("%s с жирностью %d\n", super.toString(), fatness);
+        return String.format("%s с жирностью %d процента", super.toString(), fatness);
     }
 }
