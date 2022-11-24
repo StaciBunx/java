@@ -52,7 +52,7 @@ public class VendingMachine {
     public String toString() {
         String result = "";
         for (Product product : products) {
-            result = result.concat(product.toString());
+            result = result.concat(product.toString()  + "\n");
         }
         return result;
     }

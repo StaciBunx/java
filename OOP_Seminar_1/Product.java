@@ -6,8 +6,12 @@ public class Product {
     private Double price;
 
     public Product(String name, Double price) {
-        this.name = name;
+        this(name);
         this.price = price;
+    }
+
+    public Product(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -28,7 +32,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("%s: %,.1f\n", this.getName(), this.getPrice());
+        return String.format("%s: %,.1f", this.getName(), this.getPrice());
     }
 
 }
