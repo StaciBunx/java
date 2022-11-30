@@ -1,18 +1,8 @@
-import java.util.List;
-
-public class User implements Comparable<User> {
+public class User {
     private String firstName;
     private String lastName;
     private Integer age;
-    private Personal subordinates;
-
-    public Personal getSubordinates() {
-        return subordinates;
-    }
-
-    public void setSubordinates(List<User> subordinates) {
-        this.subordinates = new Personal(subordinates);
-    }
+    private User user;
 
     public User(String firstName, String lastName, Integer age) {
         this.firstName = firstName;
@@ -32,6 +22,10 @@ public class User implements Comparable<User> {
         return age;
     }
 
+    public User getUser() {
+        return user;
+    }
+
     public void setAge(Integer age) {
         this.age = age;
     }
@@ -41,21 +35,4 @@ public class User implements Comparable<User> {
         return String.format("%s %s %d", firstName, lastName, age);
     }
 
-    @Override
-    public int compareTo(User other) {
-        String tmpVar = this.firstName + this.lastName;
-        String tmpOther = other.firstName + other.lastName;
-        int result = tmpVar.compareTo(tmpOther);
-        if (result == 0) {
-            if (this.age == other.age) {
-                return 0;
-            }
-            if (this.age < other.age) {
-                return -1;
-            }
-            return 1;
-
-        }
-        return result;
-    }
 }

@@ -1,36 +1,37 @@
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
-public class Personal implements Iterable<User> {
+public class Personal<T> implements Iterable<Node> {
 
-    private List<User> users = new ArrayList<>();
+    private Node first;
+    private Node last;
 
-    public Personal(List<User> users) {
-        this.users = users;
+    public Personal() {
+        first = last = null;
     }
 
-    public Integer size(){
-        return users.size();
-    }
-    @Override
-    public Iterator<User> iterator() {
-
-        return new Iterator<User>() {
-            private int index = 0;
-
-            @Override
-            public boolean hasNext() {
-                return index < users.size();
-            }
-
-            @Override
-            public User next() {
-                return users.get(index++);
-            }
-
-        };
+    public boolean isEmpty() {
+        return first == null;
     }
 
+    public void add(T data) {
 
-}
+        Node node = new Node();
+        node.setData(data);
+        node.setNext(null);
+
+        if (first == null) {
+            node.setPrev(null);
+            first = last = node;
+
+        } else {
+            node.setPrev(last);
+            last.setNext(node);
+            last = node;
+        }
+    }
+
+        @Override
+        public Iterator<Node> iterator() {
+            return new LinkedList(first);
+        }
+    }
