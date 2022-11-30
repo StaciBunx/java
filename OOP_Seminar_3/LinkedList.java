@@ -1,7 +1,4 @@
 import java.util.Iterator;
-
-import java.util.Iterator;
-
 public class LinkedList<T> implements Iterator<Node> {
     private Node current;
 
