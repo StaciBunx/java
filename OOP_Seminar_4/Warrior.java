@@ -1,13 +1,16 @@
 
-public abstract class Warrior {
+public abstract class Warrior<T extends Weapon, E extends Shield> {
     private String name;
     private Integer healthPoint;
-    private Weapon weapon;
+    private T weapon;
+    private E shield;
 
-    public Warrior(String name, Integer healthPoint, Weapon weapon) {
+    public Warrior(String name, Integer healthPoint, T weapon, E shield) {
         this.name = name;
         this.healthPoint = healthPoint;
         this.weapon = weapon;
+        this.shield = shield;
+
     }
 
     public String getName() {
@@ -26,8 +29,13 @@ public abstract class Warrior {
         return weapon;
     }
 
+    public E getShield() {
+        return shield;
+    }
+
     @Override
     public String toString() {
-        return String.format("weapon: %s; name: %s; health: %d; ", weapon, name, healthPoint);
+        return String.format("weapon: %s; shield: % s; name: %s; health: %d; ", weapon, shield, name, healthPoint);
     }
+
 }

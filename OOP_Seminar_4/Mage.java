@@ -1,9 +1,9 @@
-public class Mage extends Warrior {
+public class Mage extends Warrior<Staff, Heater> {
     private Integer range;
     private Integer mana;
 
-    public Mage(String name, Integer healthPoint, Staff weapon, Integer range, Integer mana) {
-        super(name, healthPoint, weapon);
+    public Mage(String name, Integer healthPoint, Staff weapon, Integer range, Integer mana, Heater shield) {
+        super(name, healthPoint, weapon, shield);
         this.mana = mana;
         this.range = range;
     }
