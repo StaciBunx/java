@@ -18,10 +18,8 @@ public class RecordController {
     }
 
     // private void validateRecord(Record record) throws Exception {
-    //     if(() {
+    //     int length = 6;
+    //     try
 
     //     }
-    // }
-
-
-}
+    }
