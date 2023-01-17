@@ -17,22 +17,20 @@ public class View {
         Commands com = Commands.NONE;
 
         while (true) {
-            String command = prompt("Type the command: ");
+            String command = prompt("Type the command(C - create, E - exit): ");
             try {
                 com = Commands.valueOf(command);
             } catch (IllegalArgumentException e) {
                 System.out.println("Command doesn't exist");
             }
-            if (com == Commands.EXIT)
+            if (com == Commands.E)
                 return;
-            if (com == Commands.CREATE) {
+            if (com == Commands.C) {
                 String input = getInfo();
 
             }
         }
     }
-
-
 
     private String getInfo() {
         System.out.println(
@@ -52,11 +50,6 @@ public class View {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
         return in.nextLine();
-    }
-
-    private String[] validateInfoLength (String input) {
-        int infoLength = 4;
-        String[] result = input.split(" ")
     }
 
 }

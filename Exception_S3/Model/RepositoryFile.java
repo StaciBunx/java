@@ -19,7 +19,7 @@ public class RepositoryFile implements Repository {
     }
 
     @Override
-    public List<Record> getAllRecords() {
+    public List<Record> getAllRecords() throws Exception {
         List<String> lines = fileOperation.readAll();
         List<Record> records = new ArrayList<>();
         for (String line : lines) {

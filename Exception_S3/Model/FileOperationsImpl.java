@@ -1,23 +1,19 @@
 package Model;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileOperationsImpl implements FileOperation {
     private String fileName;
 
-    public void FileOperationIml(String fileName) {
+    public FileOperationsImpl(String fileName) {
         this.fileName = fileName;
         try (FileWriter writer = new FileWriter(fileName, true)) {
             writer.flush();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
         }
     }
 

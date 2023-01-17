@@ -1,6 +1,7 @@
 package Model;
 
 public class RecordMapper {
+
     public String map(Record record) {
         return String.format("%s %s %s %s %d %c", record.getFamilyName(), record.getName(), record.getFatherName(),
                 record.getBirthday(), record.getPhone(), record.getSex());
