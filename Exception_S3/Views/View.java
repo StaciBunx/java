@@ -1,6 +1,7 @@
 package Views;
 
 import Controllers.*;
+import Model.*;
 import Model.Record;
 
 import java.util.Scanner;
@@ -27,7 +28,13 @@ public class View {
                 return;
             if (com == Commands.C) {
                 String input = getInfo();
-
+                RecordMapper mapper = new RecordMapper();
+                Record newRecord;
+                try {
+                    newRecord = mapper.map(input);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             }
         }
     }
