@@ -32,6 +32,7 @@ public class View {
                 Record newRecord;
                 try {
                     newRecord = mapper.map(input);
+                    recordController.saveRecord(newRecord);
                 } catch (Exception e) {
                     System.out.println(e);
                 }
@@ -58,5 +59,4 @@ public class View {
         System.out.print(message);
         return in.nextLine();
     }
-
 }

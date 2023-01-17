@@ -13,13 +13,11 @@ public class RecordController {
     }
 
     public void saveRecord(Record record) throws Exception {
-        // validateRecord(record);
-        repository.createRecord(record);
+        try {
+            repository.createRecord(record);
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
-
-    // private void validateRecord(Record record) throws Exception {
-    //     int length = 6;
-    //     try
-
-    //     }
-    }
+}
