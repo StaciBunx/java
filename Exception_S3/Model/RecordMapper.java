@@ -12,10 +12,10 @@ public class RecordMapper {
         validateInfoLength(lines);
         try {
             Integer.parseInt(lines[4].trim());
-            lines[5].charAt(0);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Phone number is incorrect");
         }
+        char sex = lines[5].charAt(0);
         return new Record(lines[0], lines[1], lines[2], lines[3], Integer.parseInt(lines[4].trim()),
                 lines[5].charAt(0));
     }

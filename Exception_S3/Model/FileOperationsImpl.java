@@ -17,6 +17,12 @@ public class FileOperationsImpl implements FileOperation {
         }
     }
 
+    public String setFileName(Record record) {
+        String fileName = "";
+        record.getFamilyName();
+        return fileName;
+    }
+
     @Override
     public void saveAll(List<String> lines) {
         try (FileWriter writer = new FileWriter(fileName, false)) {
@@ -32,6 +38,22 @@ public class FileOperationsImpl implements FileOperation {
         }
 
     }
+
+    // @Override
+    // public void saveAll(List<String> lines) {
+    // try (FileWriter writer = new FileWriter(fileName, false)) {
+    // for (String line : lines) {
+    // // запись всей строки
+    // writer.write(line);
+    // // запись по символам
+    // writer.append('\n');
+    // }
+    // writer.flush();
+    // } catch (IOException e) {
+    // System.out.println(e.getMessage());
+    // }
+
+    // }
 
     @Override
     public List<String> readAll() {
