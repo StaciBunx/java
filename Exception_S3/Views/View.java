@@ -18,7 +18,7 @@ public class View {
         Commands com = Commands.NONE;
 
         while (true) {
-            String command = prompt("Type the command(C - create, E - exit): ");
+            String command = prompt("Type the command (C - create, E - exit): ");
             try {
                 com = Commands.valueOf(command);
             } catch (IllegalArgumentException e) {
@@ -42,7 +42,7 @@ public class View {
 
     private String getInfo() {
         System.out.println(
-                "Type information separated by spaces:\n FamilyName Name FartherName Birthday(dd.mm.yyyy) Phone Sex(f/m)");
+                "Type information separated by spaces:\nFamily name\nName\nFarther name\nBirthday(dd.mm.yyyy)\nPhone\nSex(f/m)");
         String input = "";
         Scanner in = new Scanner(System.in);
         try {
