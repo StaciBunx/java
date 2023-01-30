@@ -8,23 +8,35 @@ import java.util.List;
 public class FileOperationsImpl implements FileOperation {
     private String fileName;
 
-    public FileOperationsImpl(String fileName) {
-        this.fileName = fileName;
-        try (FileWriter writer = new FileWriter(fileName, true)) {
-            writer.flush();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
-
     public String setFileName(Record record) {
         String fileName = "";
         record.getFamilyName();
         return fileName;
     }
 
+
+    public FileOperationsImpl() {
+        this.fileName = setFileName(null)
+        try (FileWriter writer = new FileWriter(fileName, true)) {
+            writer.flush();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+    // public FileOperationsImpl(String fileName) {
+    //     this.fileName = fileName;
+    //     try (FileWriter writer = new FileWriter(fileName, true)) {
+    //         writer.flush();
+    //     } catch (IOException ex) {
+    //         System.out.println(ex.getMessage());
+    //     }
+    // }
+
+
+
     @Override
     public void saveAll(List<String> lines) {
+        fileName =
         try (FileWriter writer = new FileWriter(fileName, false)) {
             for (String line : lines) {
                 // запись всей строки
