@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class View {
 
-    public void run() {
+    public void run() throws Exception {
         ViewCommands com = ViewCommands.NONE;
+        Check check = new Check();
 
         while (true) {
             String command = prompt("Type the command (C - create, E - exit): ");
@@ -16,6 +17,7 @@ public class View {
                 return;
             if (com == ViewCommands.C) {
                 String userInfo = prompt("Type information separated by spaces:\nFamily name\nName\nFarther name\nBirthday(dd.mm.yyyy)\nPhone\nSex(f/m)");
+                check.CheckLength(userInfo);
             }
         }
     }
