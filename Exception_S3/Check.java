@@ -20,19 +20,6 @@ public class Check {
         }
     }
 
-    // public void CheckFIOisAlpha(String line) {
-    //     String[] lines = CreateArray(line);
-    //     int flag = -1;
-    //     for (int i=0; i<3; i++) {
-    //         Integer.parseInt(lines[i]);
-    //     }
-    //     System.out.println("Name, Surname or Father Name has incorrect symbols");
-
-    //     }
-
-
-    // }
-
     public void CheckTelefonisNumeric(String line) {
         String[] lines = CreateArray(line);
         try {
@@ -47,16 +34,16 @@ public class Check {
         String[] lines = CreateArray(line);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.mm.yyyy");
         try {
-            LocalDate date = LocalDate.parse(lines[3]);
+            LocalDate date = LocalDate.parse(lines[3], formatter);
         } catch (DateTimeParseException e) {
             System.out.println("Вы ввели дату рождения в неверном формате.");
         }
 
     }
 
-    public void CheckSexF(String line) throws Exception {
+    public void CheckSex(String line) throws Exception {
         String[] lines = CreateArray(line);
-        if ((lines[5] != "f") && (lines[5] != "m")) {
+        if (!lines[5].equals("f") && !lines[5].equals("m")) {
             throw new Exception("Вы ввели неверный пол.");
         }
     }
