@@ -15,7 +15,7 @@ public class Check {
         if (lines.length > lengthInfo) {
             throw new Exception("Too many info. Type only what is needed.");
         }
-        if (lines.length > lengthInfo) {
+        if (lines.length < lengthInfo) {
             throw new Exception("Not enough info. Type what is needed.");
         }
     }

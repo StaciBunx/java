@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class View {
+public class ViewR {
 
     public void run() throws Exception {
         ViewCommands com = ViewCommands.NONE;
@@ -16,8 +16,9 @@ public class View {
             if (com == ViewCommands.E)
                 return;
             if (com == ViewCommands.C) {
-                String userInfo = prompt("Type information separated by spaces:\nFamily name\nName\nFarther name\nBirthday(dd.mm.yyyy)\nPhone\nSex(f/m)");
+                String userInfo = prompt("Type information separated by spaces:\nFamily name\nName\nFarther name\nBirthday(dd.mm.yyyy)\nPhone\nSex(f/m)\n");
                 check.CheckLength(userInfo);
+
             }
         }
     }
