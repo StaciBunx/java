@@ -11,13 +11,14 @@ public class ViewR {
             try {
                 com = ViewCommands.valueOf(command);
             } catch (IllegalArgumentException e) {
-                System.out.println("Command doesn't exist");
+                System.out.println("Такой команды не существует");
             }
             if (com == ViewCommands.E)
                 return;
             if (com == ViewCommands.C) {
-                String userInfo = prompt("Type information separated by spaces:\nFamily name\nName\nFarther name\nBirthday(dd.mm.yyyy)\nPhone\nSex(f/m)\n");
+                String userInfo = prompt("Введите следующие данные через пробел:\nФамилия\nИмя\nОтчество\nДата рождения(dd.mm.yyyy)\nТелефон\nПол(f/m)\n");
                 check.CheckLength(userInfo);
+                check.CheckDateFormat(userInfo);
 
             }
         }

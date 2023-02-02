@@ -13,10 +13,10 @@ public class Check {
         String[] lines = CreateArray(line);
         int lengthInfo = 6;
         if (lines.length > lengthInfo) {
-            throw new Exception("Too many info. Type only what is needed.");
+            throw new Exception("Вы ввели лишние данные.");
         }
         if (lines.length < lengthInfo) {
-            throw new Exception("Not enough info. Type what is needed.");
+            throw new Exception("Вы ввели мало данных.");
         }
     }
 
@@ -38,7 +38,7 @@ public class Check {
         try {
             Integer.parseInt(lines[4].trim());
         } catch (NumberFormatException e) {
-            System.out.println("Phone number is incorrect");
+            System.out.println("Номер телефона неверный.");
         }
 
     }
@@ -49,7 +49,7 @@ public class Check {
         try {
             LocalDate date = LocalDate.parse(lines[3]);
         } catch (DateTimeParseException e) {
-            System.out.println("Wrong format of date birth.");
+            System.out.println("Вы ввели дату рождения в неверном формате.");
         }
 
     }
@@ -57,7 +57,7 @@ public class Check {
     public void CheckSexF(String line) throws Exception {
         String[] lines = CreateArray(line);
         if ((lines[5] != "f") && (lines[5] != "m")) {
-            throw new Exception("Sex is wrong");
+            throw new Exception("Вы ввели неверный пол.");
         }
     }
 
