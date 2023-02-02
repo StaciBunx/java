@@ -1,6 +1,5 @@
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class Check {
 
@@ -32,10 +31,10 @@ public class Check {
 
     public void CheckDateFormat(String line) {
         String[] lines = CreateArray(line);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.mm.yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         try {
-            LocalDate date = LocalDate.parse(lines[3], formatter);
-        } catch (DateTimeParseException e) {
+            format.parse(lines[3]);
+        } catch (ParseException e) {
             System.out.println("Вы ввели дату рождения в неверном формате.");
         }
 
