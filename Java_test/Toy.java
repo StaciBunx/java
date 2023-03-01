@@ -34,6 +34,6 @@ public class Toy {
 
     @Override
     public String toString() {
-        return String.format("ID: %d, name: %s, weight: %d, amount: %d", getId(), getName(), getWeight(), getAmount());
+        return String.format("ID: %d; name: %s; weight: %d; amount: %d", getId(), getName(), getWeight(), getAmount());
     }
 }
