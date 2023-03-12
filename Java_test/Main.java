@@ -20,8 +20,8 @@ public class Main {
 
         System.out.println(tl);
 
-        int totalChance = tl.getTotalChance();
-        System.out.println(totalChance);
+        // int totalChance = tl.getTotalChance();
+        // System.out.println(totalChance);
 
         tl.getToy();
 
