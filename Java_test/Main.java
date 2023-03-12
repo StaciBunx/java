@@ -10,9 +10,9 @@ public class Main {
 
         ToysList tl = new ToysList<>();
 
-        Toy doll = new Toy("1", "Barbie", "50", "20");
-        Toy constructor = new Toy("2", "Lego", "25", "10");
-        Toy robot = new Toy("3", "Aibo", "10", "8");
+        Toy doll = new Toy("1", "Barbie", "25", "20");
+        Toy constructor = new Toy("2", "Lego", "20", "10");
+        Toy robot = new Toy("3", "Aibo", "55", "8");
 
         tl.add(doll);
         tl.add(constructor);
@@ -22,6 +22,8 @@ public class Main {
 
         int totalChance = tl.getTotalChance();
         System.out.println(totalChance);
+
+        tl.getToy();
 
         // int lSize = tl.getSize();
 
