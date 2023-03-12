@@ -28,12 +28,14 @@ public class ToysList<T extends Toy> implements Iterable<Toy> {
         int totalChance = getTotalChance();
         Random random = new Random();
         int randomChance = random.nextInt(totalChance);
-        //System.out.printf("Рандом %d\n", randomChance);
         for (int i = 0; i < toysList.size(); i++) {
             randomChance -= Integer.parseInt(toysList.get(i).getWeight());
             if (randomChance <= 0) {
                 System.out.printf("Текущее значение стало меньше нуля: %d!!!!\n", randomChance);
                 System.out.printf("Выпала игрушка %s", toysList.get(i).getName() );
+                int amount = Integer.parseInt(toysList.get(i).getAmount()) - 1;
+                toysList.get(i).setAmount(Integer.toString(amount));
+                System.out.printf("Осталось %s игрушек", toysList.get(i).getAmount());
                 break;
             }
         }
