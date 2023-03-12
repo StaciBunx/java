@@ -1,9 +1,31 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
-public class Game {
-private static Toy toy;
+public class Game{
+
+
+
+    // int [] number = new int []
+
+    // private String fileName;
+
+    // public Game(String fileName) {
+    //     this.fileName = fileName;
+    //     try (FileWriter writer = new FileWriter(fileName, true)) {
+    //         writer.flush();
+    //     } catch (IOException ex) {
+    //         System.out.println(ex.getMessage());
+    //     }
+    // }
+
+
+
+// private static Toy toy;
 
 
 // private Comparator <Toy> comparator = new Comparator<Toy>() {
@@ -13,11 +35,17 @@ private static Toy toy;
 //     }
 // };
 
-public static int getToy(int numberOfToys) {
-    Random random = new Random();
-    int win = random.nextInt(numberOfToys)+1;
-return win;
+// public static Toy getToy() {
+//     Random random = new Random();
+//     int win = random.nextInt(numberOfToys)+1;
+// return win;
+// }
 
-}
+// public static int getToy(int numberOfToys) {
+//     Random random = new Random();
+//     int win = random.nextInt(numberOfToys)+1;
+// return win;
+
+// }
 
 }
