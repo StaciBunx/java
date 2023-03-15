@@ -16,7 +16,7 @@ public class Example03 {
     }
 
     public static void AddLinkedList(int[] arr) {
-        LinkedList<Integer> ll = new LinkedList<>();
+        List<Integer> ll = new List<>();
         for (int i = 0; i < arr.length; i++) {
             ll.add(arr[i]);
         }

@@ -32,6 +32,6 @@ public class Personal<T> implements Iterable<Node> {
 
         @Override
         public Iterator<Node> iterator() {
-            return new LinkedList(first);
+            return new List(first);
         }
     }
